@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .icon { fill: none; stroke: #38bdf8; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.28; }
+      .icon-purple { stroke: #a855f7; opacity: 0.28; }
+      .icon-fill { fill: #38bdf8; opacity: 0.22; }
+      .text { fill: #7dd3fc; font-family: monospace; font-size: 11px; opacity: 0.30; }
+      .text-purple { fill: #c4b5fd; font-family: monospace; font-size: 11px; opacity: 0.30; }
+    </style>
+  </defs>
+
+  <!-- CPU / chip top-left -->
+  <g transform="translate(40, 50)">
+    <rect class="icon" x="0" y="0" width="36" height="36" rx="3"/>
+    <rect class="icon" x="8" y="8" width="20" height="20"/>
+    <line class="icon" x1="-6" y1="10" x2="0" y2="10"/>
+    <line class="icon" x1="-6" y1="18" x2="0" y2="18"/>
+    <line class="icon" x1="-6" y1="26" x2="0" y2="26"/>
+    <line class="icon" x1="36" y1="10" x2="42" y2="10"/>
+    <line class="icon" x1="36" y1="18" x2="42" y2="18"/>
+    <line class="icon" x1="36" y1="26" x2="42" y2="26"/>
+    <line class="icon" x1="10" y1="-6" x2="10" y2="0"/>
+    <line class="icon" x1="18" y1="-6" x2="18" y2="0"/>
+    <line class="icon" x1="26" y1="-6" x2="26" y2="0"/>
+    <line class="icon" x1="10" y1="36" x2="10" y2="42"/>
+    <line class="icon" x1="18" y1="36" x2="18" y2="42"/>
+    <line class="icon" x1="26" y1="36" x2="26" y2="42"/>
+  </g>
+
+  <!-- Server stack top-right -->
+  <g transform="translate(380, 60)">
+    <rect class="icon icon-purple" x="0" y="0" width="60" height="14" rx="2"/>
+    <circle class="icon icon-purple" cx="8" cy="7" r="1.5"/>
+    <circle class="icon icon-purple" cx="14" cy="7" r="1.5"/>
+    <rect class="icon icon-purple" x="0" y="20" width="60" height="14" rx="2"/>
+    <circle class="icon icon-purple" cx="8" cy="27" r="1.5"/>
+    <circle class="icon icon-purple" cx="14" cy="27" r="1.5"/>
+    <rect class="icon icon-purple" x="0" y="40" width="60" height="14" rx="2"/>
+    <circle class="icon icon-purple" cx="8" cy="47" r="1.5"/>
+    <circle class="icon icon-purple" cx="14" cy="47" r="1.5"/>
+  </g>
+
+  <!-- Wi-Fi center-left -->
+  <g transform="translate(60, 220)">
+    <path class="icon" d="M 0 30 Q 25 0 50 30"/>
+    <path class="icon" d="M 8 30 Q 25 12 42 30"/>
+    <path class="icon" d="M 16 30 Q 25 22 34 30"/>
+    <circle class="icon-fill" cx="25" cy="30" r="2.5"/>
+  </g>
+
+  <!-- IP address text middle -->
+  <text class="text" x="200" y="180">192.168.1.1/24</text>
+  <text class="text-purple" x="320" y="220">::1</text>
+  <text class="text" x="80" y="380">10.0.0.1</text>
+  <text class="text-purple" x="380" y="350">/26</text>
+
+  <!-- Code brackets center -->
+  <g transform="translate(230, 270)">
+    <path class="icon icon-purple" d="M -8 0 L -16 12 L -8 24"/>
+    <path class="icon icon-purple" d="M 28 0 L 36 12 L 28 24"/>
+    <line class="icon icon-purple" x1="6" y1="0" x2="14" y2="24"/>
+  </g>
+
+  <!-- Network node graph bottom-left -->
+  <g transform="translate(40, 420)">
+    <circle class="icon" cx="0" cy="0" r="4"/>
+    <circle class="icon" cx="30" cy="-10" r="4"/>
+    <circle class="icon" cx="30" cy="20" r="4"/>
+    <circle class="icon" cx="60" cy="0" r="4"/>
+    <line class="icon" x1="4" y1="0" x2="26" y2="-10"/>
+    <line class="icon" x1="4" y1="0" x2="26" y2="20"/>
+    <line class="icon" x1="34" y1="-10" x2="56" y2="0"/>
+    <line class="icon" x1="34" y1="20" x2="56" y2="0"/>
+  </g>
+
+  <!-- Binary text scattered -->
+  <text class="text" x="280" y="80">01001000 01101001</text>
+  <text class="text-purple" x="20" y="160">10110011</text>
+  <text class="text" x="350" y="430">0xFF3A</text>
+
+  <!-- Lock icon middle-right -->
+  <g transform="translate(420, 250)">
+    <rect class="icon" x="0" y="10" width="22" height="18" rx="2"/>
+    <path class="icon" d="M 4 10 V 5 a 7 7 0 0 1 14 0 V 10"/>
+    <circle class="icon-fill" cx="11" cy="19" r="1.5"/>
+  </g>
+
+  <!-- Ethernet plug bottom-center -->
+  <g transform="translate(220, 420)">
+    <rect class="icon icon-purple" x="0" y="6" width="32" height="22" rx="2"/>
+    <rect class="icon icon-purple" x="6" y="0" width="20" height="6"/>
+    <line class="icon icon-purple" x1="8" y1="14" x2="8" y2="22"/>
+    <line class="icon icon-purple" x1="12" y1="14" x2="12" y2="22"/>
+    <line class="icon icon-purple" x1="16" y1="14" x2="16" y2="22"/>
+    <line class="icon icon-purple" x1="20" y1="14" x2="20" y2="22"/>
+    <line class="icon icon-purple" x1="24" y1="14" x2="24" y2="22"/>
+  </g>
+
+  <!-- HDD/SSD icon -->
+  <g transform="translate(390, 160)">
+    <rect class="icon" x="0" y="0" width="44" height="28" rx="2"/>
+    <circle class="icon" cx="22" cy="14" r="9"/>
+    <circle class="icon-fill" cx="22" cy="14" r="2"/>
+  </g>
+
+  <!-- Cloud icon -->
+  <g transform="translate(140, 100)">
+    <path class="icon icon-purple" d="M 8 18 a 8 8 0 0 1 0 -16 a 10 10 0 0 1 19 4 a 6 6 0 0 1 1 12 z"/>
+  </g>
+
+  <!-- Terminal cursor -->
+  <g transform="translate(150, 320)">
+    <rect class="icon" x="0" y="0" width="50" height="32" rx="3"/>
+    <text class="text" x="6" y="20">&gt;_</text>
+  </g>
+
+  <!-- Subnet mask -->
+  <text class="text-purple" x="260" y="370">255.255.255.0</text>
+</svg>
