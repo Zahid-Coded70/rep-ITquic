@@ -1,29 +1,83 @@
 * { box-sizing: border-box; }
 
+:root,
+[data-theme="dark"] {
+  --bg-base: #0f172a;
+  --bg-grad-end: #1e1b4b;
+  --bg-card: #1e293b;
+  --bg-card-2: #0b1224;
+  --border: #334155;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent-1: #38bdf8;
+  --accent-2: #a855f7;
+  --letter-bg: #1e293b;
+  --letter-text: #94a3b8;
+  --tag-bg: #1e3a5f;
+  --tag-text: #7dd3fc;
+  --overlay: rgba(15, 23, 42, 0.65);
+  --correct-bg: rgba(34, 197, 94, 0.15);
+  --correct-border: #22c55e;
+  --correct-text: #86efac;
+  --wrong-bg: rgba(239, 68, 68, 0.15);
+  --wrong-border: #ef4444;
+  --wrong-text: #fca5a5;
+  --bg-pattern-opacity: 1;
+}
+
+[data-theme="light"] {
+  --bg-base: #f8fafc;
+  --bg-grad-end: #e0e7ff;
+  --bg-card: #ffffff;
+  --bg-card-2: #f1f5f9;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent-1: #0284c7;
+  --accent-2: #7c3aed;
+  --letter-bg: #f1f5f9;
+  --letter-text: #475569;
+  --tag-bg: #e0f2fe;
+  --tag-text: #0369a1;
+  --overlay: rgba(248, 250, 252, 0.4);
+  --correct-bg: rgba(34, 197, 94, 0.12);
+  --correct-border: #16a34a;
+  --correct-text: #15803d;
+  --wrong-bg: rgba(239, 68, 68, 0.12);
+  --wrong-border: #dc2626;
+  --wrong-text: #b91c1c;
+  --bg-pattern-opacity: 0.35;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  color: #e2e8f0;
+  color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   min-height: 100vh;
+  transition: background-color 0.3s, color 0.2s;
 }
 
 body {
-  background-color: #0f172a;
+  background-color: var(--bg-base);
   background-image:
     url("/bg-pattern.svg"),
-    linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    linear-gradient(135deg, var(--bg-base) 0%, var(--bg-grad-end) 100%);
   background-repeat: repeat, no-repeat;
   background-size: 500px 500px, cover;
   background-attachment: fixed, fixed;
   position: relative;
 }
 
+[data-theme="light"] body {
+  background-blend-mode: luminosity;
+}
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(15, 23, 42, 0.65) 80%);
+  background: radial-gradient(ellipse at center, transparent 0%, var(--overlay) 80%);
   pointer-events: none;
   z-index: 0;
 }
