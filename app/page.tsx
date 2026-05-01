@@ -288,7 +288,7 @@ export default function QuizPage() {
                 disabled={hintsLeft <= 0 || locked || hiddenByHint.size > 0}
                 title="Remove two wrong answers"
               >
-                💡 50/50 ({hintsLeft} left)
+                💡 Hint ({hintsLeft} left)
               </button>
             </div>
             <div className={styles.question}>{q.q}</div>
