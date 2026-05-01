@@ -27,8 +27,11 @@ function pickQuiz(pool: Question[], n: number): Question[] {
 
 export default function QuizPage() {
   const [theme, setTheme] = useState<Theme>("dark");
+  // Initialize with a deterministic slice so SSR HTML matches the first
+  // client render. The real shuffle happens in a useEffect on mount, before
+  // the user can answer the first question.
   const [questions, setQuestions] = useState<Question[]>(() =>
-    pickQuiz(QUESTIONS, QUIZ_SIZE)
+    QUESTIONS.slice(0, Math.min(QUIZ_SIZE, QUESTIONS.length))
   );
   const [idx, setIdx] = useState(0);
   const [score, setScore] = useState(0);
@@ -48,6 +51,13 @@ export default function QuizPage() {
   const answered = idx + (selected !== null ? 1 : 0);
   const progress = (answered / total) * 100;
   const locked = selected !== null;
+
+  // Shuffle the quiz on mount. Done in an effect (not the useState
+  // initializer) so server-rendered HTML doesn't disagree with the first
+  // client render — Math.random() would produce different values.
+  useEffect(() => {
+    setQuestions(pickQuiz(QUESTIONS, QUIZ_SIZE));
+  }, []);
 
   // --- Theme: hydrate on mount, persist on change ---
   useEffect(() => {

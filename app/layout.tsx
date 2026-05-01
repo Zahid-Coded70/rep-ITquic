@@ -16,7 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    // suppressHydrationWarning is intentional: themeBootstrap sets
+    // data-theme on <html> before React hydrates, which always differs from
+    // the server-rendered HTML. This is the canonical pattern for theme
+    // bootstrap scripts and only suppresses warnings for <html>'s attributes.
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
       </head>
